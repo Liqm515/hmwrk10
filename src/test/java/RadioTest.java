@@ -15,6 +15,25 @@ public class RadioTest {
 
     }
     @Test
+    public  void setOverMaxCurrentStation() {
+        Radio radio = new Radio();
+        radio.setCurrentStation(10);
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public  void setOverMinCurrentStation() {
+        Radio radio = new Radio();
+        radio.setCurrentStation(-1);
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
     public  void setCurrentStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(8);
