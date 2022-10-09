@@ -15,6 +15,12 @@ public class Radio {
     }
 
     public void setCurrentStation(int currentStation) {
+        if(currentStation < 0) {
+            return;
+        }
+        if(currentStation > 9){
+            return;
+        }
         this.currentStation = currentStation;
     }
 
